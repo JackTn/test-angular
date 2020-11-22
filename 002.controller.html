@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>controller</title>
+    <script src="./jslib/angular.js"></script>
+    <script>
+        let con = angular.module('test', [])
+        con.controller('main', function($scope) {
+            $scope.a = 0;
+            $scope.b = 0
+            $scope.parseInt = function(str) {
+                return parseInt(str);
+            }
+        }) 
+    </script>
+</head>
+<body ng-controller='main'>
+    <input type="text" value='' ng-model='a'>
+    <input type="text" value='' ng-model='b'>
+    {{parseInt(a) + parseInt(b)}}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message board</title>
+    <script src="./jslib/angular.js"></script>
+</head>
+<body ng-init="arr = [{name: 'blue', content: 'hello'}]">
+    name: <input type="text" name='' value='' ng-model="name">
+    content: <input type="text" name='' value='' ng-model="content">
+    <input type="button" value='submit' ng-click="arr.unshift({name: name, content: content})">
+    <ul>
+        <li ng-repeat="(index, value) in arr">
+            <h4>{{value.name}}</h4>
+            <p>{{value.content}}</p>
+        </li>
+    </ul>
+</body>
+</html>
